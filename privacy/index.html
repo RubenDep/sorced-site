@@ -12,10 +12,10 @@
 <main>
 <nav><a href="../">Sorced</a><a href="../support/">Support</a></nav>
 <h1>Privacy policy</h1>
-<p class="lead">Effective 22 October 2026</p>
+<p class="lead">Effective 14 November 2026</p>
 
 <div class="card">
-<p><strong>In short:</strong> Sorced has no accounts, no ads and no tracking. Your progress stays on your iPhone. The game sends anonymous play stats and crash reports that help me improve it. You can turn that off at any time in Settings.</p>
+<p><strong>In short:</strong> Sorced has no accounts and no ads, and doesn't track you. Your progress stays on your iPhone. Seal I is free; the full game is a one-time purchase handled by Apple. The game sends anonymous play stats and crash reports that help me improve it, and outside Europe it tells Meta about installs, duels cleared and purchases, so I can see whether my Facebook and Instagram ads work. You can turn all of that off at any time in Settings.</p>
 </div>
 
 <h2>Who makes Sorced</h2>
@@ -28,26 +28,31 @@
 <p>Unless you turn off <em>Share play stats</em> in Sorced's Settings, the game sends:</p>
 <ul>
 <li><strong>Gameplay events:</strong> which screens you open, which duels you start and how they end (score, stars, duration, the runes and spells you drew, how often a stroke wasn't recognised), seals and duels you complete, Gauntlet runs, upgrades, and changes to settings.</li>
+<li><strong>Purchase events:</strong> when the full-game offer is shown, and whether a purchase or restore was started, completed, cancelled or failed, with its price, currency, App Store country and Apple's transaction number. Payment itself is handled entirely by Apple: I never see your card or your Apple Account.</li>
 <li><strong>Crash reports:</strong> what the app was doing when it crashed.</li>
 <li><strong>Device details:</strong> device model, iOS version, app version and language.</li>
 <li><strong>A random ID</strong> created for this installation, so events from the same game can be counted together. It isn't linked to your name, your Apple ID or any other app.</li>
 </ul>
 
+<h2>Meta (Facebook and Instagram ads)</h2>
+<p>To measure whether my ads on Facebook and Instagram lead to people playing and buying Sorced, the App Store version of the game uses Meta's SDK, but only when all of these hold: <em>Share play stats</em> is on, and neither your App Store country nor your device region is in the EU, the EEA, the UK or Switzerland. It then sends Meta: that the app was installed and opened, when you clear a duel for the first time (and when you beat Seal I), and App Store purchases with their price and currency, together with device details such as model, iOS version, app version and language. Meta receives your IP address with these events.</p>
+<p>Sorced never shows the tracking prompt and never reads your device's advertising identifier, so Meta can't link these events to you across other apps and websites; Apple's privacy-preserving install reports (SKAdNetwork) tell Meta which ad led to an install. Meta processes the data under its own <a href="https://www.facebook.com/privacy/policy/">privacy policy</a>, possibly in the United States.</p>
+
 <h2>What is never collected</h2>
-<p>No name, email address or account; no contacts, photos or precise location; no advertising identifier; and no tracking across other apps or websites. Your IP address is discarded when the data arrives, and no location is derived from it.</p>
+<p>No name, email address or account; no contacts, photos or precise location; no advertising identifier; and no tracking across other apps or websites. PostHog discards your IP address when the data arrives, and no location is derived from it.</p>
 
 <h2>Who processes it</h2>
-<p>The stats are stored with <a href="https://posthog.com">PostHog</a>, an analytics service, in its EU data centre, on my behalf and only for the purposes below. The data isn't sold or shared with anyone else.</p>
+<p>The stats are stored with <a href="https://posthog.com">PostHog</a>, an analytics service, in its EU data centre, on my behalf and only for the purposes below. Outside Europe, the events listed under <em>Meta</em> also go to Meta. The data isn't sold or shared with anyone else.</p>
 
 <h2>Why</h2>
-<p>To find duels that are too hard or too easy, strokes the game misreads, and crashes, so they can be fixed. The legal basis is my legitimate interest in keeping the game fair, stable and fun. The data is anonymous and limited to what that needs, and you can object at any time by turning sharing off.</p>
+<p>To find duels that are too hard or too easy, strokes the game misreads, and crashes, so they can be fixed; to see whether players who reach the end of Seal I buy the full game; and to measure whether my ads bring players. The legal basis is my legitimate interest in keeping the game fair, stable and fun. The data is anonymous and limited to what that needs, and you can object at any time by turning sharing off.</p>
 
 <h2>How long it's kept</h2>
 <p>Stats are kept for 12 months, then deleted.</p>
 
 <h2>Your choices</h2>
 <ul>
-<li><strong>Stop sharing:</strong> turn off <em>Share play stats</em> in Sorced's Settings. Nothing more is sent.</li>
+<li><strong>Stop sharing:</strong> turn off <em>Share play stats</em> in Sorced's Settings. Nothing more is sent to PostHog, and Meta's SDK no longer starts from the next launch.</li>
 <li><strong>Delete what was sent:</strong> write to the address above with the <em>Stats ID</em> shown in Settings, and I'll delete the data linked to it.</li>
 <li>You can also ask what data is held about that ID, or complain to your data protection authority.</li>
 </ul>
