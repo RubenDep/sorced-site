@@ -26,43 +26,83 @@
 <link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Cinzel:wght@700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Cinzel:wght@700;900&display=swap">
 <link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="download.css">
 </head>
-<body>
+<body class="dl-page">
 <!-- The page the Facebook/Instagram ads link to (Meta doesn't allow App Store links in traffic campaigns): the
      App Store badge first, so it's above the fold on a phone, then the 10 s trailer (sorced repo,
-     trailer/out/sorced-trailer-10s.mp4, scaled to 540 px wide for the web) in a phone frame. -->
+     trailer/out/sorced-trailer-10s.mp4, scaled to 540 px wide for the web) in a phone frame. Screenshots are the
+     App Store ones (sorced repo, appstore/screenshots-6.3), scaled to 420 px wide. Styles: download.css. -->
 <main class="dl">
-<section class="dl-hero">
-<h1 class="dl-title">Sorced</h1>
-<p class="dl-sub">Draw runes. Duel wizards.</p>
-<p class="dl-pitch">Your finger is your wand. Trace a triangle and Fire leaps across the arena; a circle calls the Tide, a zigzag the Storm, a square the Stone. The cleaner your stroke, the harder it hits.</p>
-<p class="dl-cta">
-<a class="store-badge store-badge--big" href="https://apps.apple.com/app/id6820204099"><img src="../assets/app-store-badge.svg" alt="Download on the App Store" width="192" height="64"></a>
-</p>
+<section class="hero" aria-label="Download">
+<div class="hero__copy">
+<div class="wordmark">
+<svg class="seal" viewBox="-50 -50 100 100" aria-hidden="true">
+<circle r="48" fill="none" stroke="#e9c46a" stroke-width=".6"/>
+<circle r="44" fill="none" stroke="#e9c46a" stroke-width=".3"/>
+<path d="M0,-44 L25.9,35.6 L-41.8,-13.6 L41.8,-13.6 L-25.9,35.6 Z" fill="none" stroke="#e9c46a" stroke-width=".6" stroke-linejoin="round"/>
+</svg>
+<h1>Sorced</h1>
+</div>
+<p class="tagline">Draw runes. Duel wizards.</p>
+<p class="pitch">Your finger is your wand. Trace a triangle and <strong class="r-fire">Fire</strong> leaps across the arena; a circle calls the <strong class="r-tide">Tide</strong>, a zigzag the <strong class="r-storm">Storm</strong>, a square the <strong class="r-stone">Stone</strong>. The cleaner your stroke, the harder it hits.</p>
+<p class="cta"><a class="store-badge store-badge--big" href="https://apps.apple.com/app/id6820204099"><img src="../assets/app-store-badge.svg" alt="Download on the App Store" width="192" height="64"></a></p>
 <p class="android-note" hidden>Sorced is on iPhone for now.</p>
-<p class="dl-meta">Seal I free &middot; one purchase unlocks the rest &middot; no ads, no account</p>
-</section>
-
+<p class="meta"><span>Seal I free</span> &middot; <span>one purchase unlocks the rest</span> &middot; <span>no ads, no account</span></p>
+</div>
+<div class="hero__stage">
 <figure class="phone">
 <video src="../assets/video/trailer.mp4" poster="../assets/video/trailer-poster.jpg" width="540" height="960"
        autoplay muted loop playsinline controls preload="metadata"
        aria-label="Trailer: runes drawn in duels, the Hexlings swatted, a reflect and Starfall."></video>
 </figure>
+</div>
+</section>
 
-<ul class="pills" aria-label="At a glance">
-<li>35 duels, 7 seals</li>
-<li>41 rivals</li>
-<li>Fuse runes into new spells</li>
-<li>The Endless Gauntlet</li>
+<section class="section" aria-labelledby="runes-h">
+<p class="eyebrow">The spellbook</p>
+<h2 id="runes-h">Four runes. Each beats another.</h2>
+<ul class="runes">
+<li class="rune r-fire"><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M30 8 L54 50 L6 50 Z"/></svg><b>Fire</b><small>a triangle</small></li>
+<li class="rune r-tide"><svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="22"/></svg><b>Tide</b><small>a circle</small></li>
+<li class="rune r-storm"><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M10 12 L50 12 L10 48 L50 48"/></svg><b>Storm</b><small>a zigzag</small></li>
+<li class="rune r-stone"><svg viewBox="0 0 60 60" aria-hidden="true"><path d="M10 10 H50 V50 H10 Z"/></svg><b>Stone</b><small>a square</small></li>
 </ul>
+<p class="runes-note">Chain them into fusions like Plasma Lance and Tempest, reflect spells back at your rival, then fill your Surge and draw the star to call down Starfall.</p>
+</section>
 
-<p class="dl-cta">
-<a class="store-badge" href="https://apps.apple.com/app/id6820204099"><img src="../assets/app-store-badge.svg" alt="Download on the App Store" width="168" height="56"></a>
-</p>
+<section class="section" aria-labelledby="shots-h">
+<p class="eyebrow">Seven halls, seven keepers</p>
+<h2 id="shots-h">Break the Seven Seals</h2>
+<ul class="shots">
+<li><img src="../assets/shots/01.jpg" width="420" height="913" loading="lazy" alt="Every spell is a rune you draw: a perfect Fire against the Cinder Abbot."></li>
+<li><img src="../assets/shots/02.jpg" width="420" height="913" loading="lazy" alt="Fuse runes into new spells: Tempest against the Engine Saint."></li>
+<li><img src="../assets/shots/03.jpg" width="420" height="913" loading="lazy" alt="Fill your Surge and draw the star: Starfall against the Glass Queen."></li>
+<li><img src="../assets/shots/05.jpg" width="420" height="913" loading="lazy" alt="Every boss fights its own way: the Cinder Abbot's loadout."></li>
+<li><img src="../assets/shots/06.jpg" width="420" height="913" loading="lazy" alt="Seven seals to break: the map of the halls."></li>
+<li><img src="../assets/shots/07.jpg" width="420" height="913" loading="lazy" alt="Ascend your runes: the Grimoire."></li>
+</ul>
+<p class="shots-hint">Swipe for more &rarr;</p>
+</section>
 
-<footer>© 2026 Ruben Depover · <a href="../">About</a> · <a href="../support/">Support</a> · <a href="../privacy/">Privacy policy</a><br>
+<section class="section" aria-label="At a glance">
+<ul class="facts">
+<li><b>35</b><span>duels across 7 halls</span></li>
+<li><b>41</b><span>rivals, each with their own tricks</span></li>
+<li><b>&infin;</b><span>the Endless Gauntlet</span></li>
+<li><b>120 Hz</b><span>strokes read on ProMotion iPhones</span></li>
+</ul>
+</section>
+
+<section class="closing" aria-labelledby="closing-h">
+<h2 id="closing-h">Pick up your wand</h2>
+<p>Seal I and its five duels are free. One purchase opens the rest, with nothing else to buy.</p>
+<p class="cta"><a class="store-badge" href="https://apps.apple.com/app/id6820204099"><img src="../assets/app-store-badge.svg" alt="Download on the App Store" width="168" height="56"></a></p>
+</section>
+
+<footer>&copy; 2026 Ruben Depover &middot; <a href="../">About</a> &middot; <a href="../support/">Support</a> &middot; <a href="../privacy/">Privacy policy</a>
 <small>iPhone and App Store are trademarks of Apple Inc., registered in the U.S. and other countries.</small></footer>
 </main>
 <script src="../assets/js/stats.js" defer></script>

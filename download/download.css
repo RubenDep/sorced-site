@@ -1,0 +1,131 @@
+/* Download page (download/): the page the Facebook/Instagram ads link to. Builds on ../style.css (colours, fonts). */
+:root {
+  --fire: #ff8a3d;
+  --tide: #5cc2ff;
+  --storm: #c9a6ff;
+  --stone: #d8c08a;
+  --gold-hi: #fbe7a6;
+  --gold-lo: #a8782c;
+}
+
+body.dl-page {
+  background:
+    radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,.55) 50%, transparent 51%),
+    radial-gradient(1px 1px at 78% 9%, rgba(255,255,255,.45) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 64% 31%, rgba(251,231,166,.6) 50%, transparent 51%),
+    radial-gradient(1px 1px at 33% 42%, rgba(255,255,255,.35) 50%, transparent 51%),
+    radial-gradient(1px 1px at 90% 47%, rgba(255,255,255,.4) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 6% 61%, rgba(255,255,255,.4) 50%, transparent 51%),
+    radial-gradient(1px 1px at 52% 70%, rgba(255,255,255,.3) 50%, transparent 51%),
+    radial-gradient(1px 1px at 22% 88%, rgba(251,231,166,.45) 50%, transparent 51%),
+    radial-gradient(1px 1px at 85% 82%, rgba(255,255,255,.35) 50%, transparent 51%),
+    radial-gradient(ellipse 80% 55% at 50% -5%, #36266a 0%, rgba(42,31,77,.6) 35%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 85% 60%, rgba(60,30,90,.35), transparent 70%),
+    var(--night);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+.dl { max-width: 1040px; margin: 0 auto; padding: 0 16px 56px; text-align: center; }
+
+/* ---- Hero ---- */
+.hero { display: grid; gap: 28px; align-items: center; padding-top: 36px; }
+.hero__copy { position: relative; }
+
+.wordmark { position: relative; margin: 0 auto 16px; width: min(100%, 420px); aspect-ratio: 2.4; display: grid; place-items: center; }
+.wordmark svg.seal { position: absolute; left: 50%; top: 50%; height: 118%; width: auto; aspect-ratio: 1; transform: translate(-50%, -50%);
+  opacity: .32; overflow: visible; }
+.wordmark h1 {
+  position: relative; margin: 0;
+  font-family: "Cinzel", Georgia, serif; font-weight: 900;
+  font-size: clamp(2.9rem, 12vw, 4.4rem); letter-spacing: .16em; padding-left: .16em; line-height: 1;
+  background: linear-gradient(180deg, var(--gold-hi) 0%, var(--gold) 45%, var(--gold-lo) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 2px 0 rgba(0,0,0,.6)) drop-shadow(0 0 22px rgba(233,196,106,.35));
+}
+.tagline { font-family: "Cinzel", Georgia, serif; font-weight: 700; letter-spacing: .08em; color: var(--ink);
+  margin: 0 0 14px; font-size: 1.05rem; }
+.pitch { max-width: 31em; margin: 0 auto 22px; color: #e3d9c4; font-size: 1.08rem; }
+.pitch strong { font-weight: 700; }
+.r-fire { color: var(--fire); } .r-tide { color: var(--tide); } .r-storm { color: var(--storm); } .r-stone { color: var(--stone); }
+
+.cta { margin: 0; }
+.store-badge { display: inline-block; line-height: 0; border-radius: 12px; transition: transform .15s ease, box-shadow .15s ease;
+  box-shadow: 0 0 0 1px rgba(233,196,106,.35), 0 8px 28px rgba(233,196,106,.18); }
+.store-badge:hover, .store-badge:focus-visible { transform: translateY(-2px); box-shadow: 0 0 0 1px rgba(233,196,106,.6), 0 10px 34px rgba(233,196,106,.3); }
+.store-badge img { display: block; height: auto; }
+.meta { color: var(--muted); font-size: .95rem; margin: 14px 0 0; }
+.meta span { white-space: nowrap; }
+.android-note { color: var(--gold); margin: 10px 0 0; }
+
+/* Phone with the trailer */
+.hero__stage { position: relative; display: grid; place-items: center; padding: 8px 0 4px; }
+.hero__stage::before { content: ""; position: absolute; width: 120%; max-width: 520px; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle, rgba(233,196,106,.20) 0%, rgba(120,80,200,.14) 40%, transparent 68%); pointer-events: none; }
+.phone { position: relative; margin: 0; width: min(290px, 74vw); padding: 9px; border-radius: 38px;
+  background: linear-gradient(150deg, #f5dc93 0%, #b88a3a 28%, #5b4219 52%, #c99c4a 78%, #f0d48a 100%);
+  box-shadow: 0 30px 70px rgba(0,0,0,.65), 0 0 0 1px rgba(0,0,0,.6) inset; }
+.phone video { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; border-radius: 30px; background: #000; }
+
+/* ---- Section headings ---- */
+.section { margin-top: 64px; }
+.eyebrow { font-family: "Cinzel", Georgia, serif; font-weight: 700; color: var(--gold); letter-spacing: .14em;
+  font-size: .82rem; margin: 0 0 6px; text-transform: uppercase; }
+.section h2 { font-family: "Cinzel", Georgia, serif; font-weight: 700; color: var(--ink); letter-spacing: .04em;
+  font-size: clamp(1.35rem, 5vw, 1.8rem); margin: 0 0 22px; }
+.divider { display: block; margin: 0 auto 18px; width: 140px; height: 14px; }
+
+/* ---- Four runes ---- */
+.runes { list-style: none; padding: 0; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; max-width: 760px; }
+.rune { margin: 0; padding: 18px 12px 16px; border-radius: 16px; background: linear-gradient(180deg, rgba(30,22,52,.9), rgba(18,14,32,.9));
+  border: 1px solid var(--line); }
+.rune svg { width: 54px; height: 54px; display: block; margin: 0 auto 10px; overflow: visible; }
+.rune svg path, .rune svg circle { fill: none; stroke: currentColor; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round;
+  filter: drop-shadow(0 0 6px currentColor); }
+.rune b { display: block; font-family: "Cinzel", Georgia, serif; letter-spacing: .08em; font-size: 1.05rem; }
+.rune small { color: var(--muted); font-size: .92rem; }
+.runes-note { color: var(--muted); margin: 18px auto 0; max-width: 30em; }
+
+/* ---- Screenshots ---- */
+.shots { list-style: none; margin: 0 -16px; padding: 4px 16px 18px; display: flex; gap: 14px; overflow-x: auto;
+  scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.shots::-webkit-scrollbar { display: none; }
+.shots li { flex: 0 0 auto; width: min(200px, 46vw); scroll-snap-align: center; margin: 0; }
+.shots img { display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid rgba(233,196,106,.35);
+  box-shadow: 0 14px 34px rgba(0,0,0,.55); }
+.shots-hint { color: var(--muted); font-size: .85rem; margin: 0; }
+
+/* ---- Facts ---- */
+.facts { list-style: none; padding: 0; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; max-width: 760px; }
+.facts li { margin: 0; padding: 16px 10px; border-radius: 14px; border: 1px solid var(--line); background: rgba(18,14,32,.75); }
+.facts b { display: block; font-family: "Cinzel", Georgia, serif; font-size: 1.6rem; color: var(--gold); line-height: 1.15; }
+.facts span { color: var(--muted); font-size: .92rem; }
+
+/* ---- Closing CTA ---- */
+.closing { margin-top: 64px; padding: 34px 18px; border-radius: 22px; border: 1px solid rgba(233,196,106,.3);
+  background: radial-gradient(ellipse at 50% 0%, rgba(233,196,106,.14), transparent 70%), rgba(18,14,32,.8); }
+.closing h2 { margin-bottom: 8px; }
+.closing p { color: var(--muted); margin: 0 0 20px; }
+.closing p.cta { margin: 0; }
+
+.dl footer { text-align: center; margin-top: 48px; }
+.dl footer small { display: block; margin-top: 6px; color: var(--muted); }
+
+/* ---- Wider screens: copy left, phone right ---- */
+@media (min-width: 600px) {
+  .runes, .facts { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 860px) {
+  .dl { padding-left: 32px; padding-right: 32px; }
+  .hero { grid-template-columns: 1.1fr .9fr; gap: 40px; padding-top: 64px; text-align: left; }
+  .wordmark { margin-left: 0; }
+  .wordmark h1 { font-size: 4.6rem; }
+  .pitch { margin-left: 0; }
+  .shots { justify-content: center; margin: 0; padding-left: 0; padding-right: 0; }
+  .shots li { width: 150px; }
+  .shots-hint { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .store-badge { transition: none; }
+}
