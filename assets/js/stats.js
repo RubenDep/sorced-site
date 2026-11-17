@@ -30,9 +30,12 @@
     // TikTok gets one campaign per utm_campaign (tiktok_nordics_test, tiktok_en_test), so App Store Connect
     // can split installs between TikTok campaigns; Apple allows at most 40 characters.
     var ttCampaign = clean(params.get("utm_campaign"));
-    var ct = params.has("fbclid") || /^(facebook|instagram|meta|fb|ig)$/.test(src) ? "meta"
+    // An explicit ct in the ad's URL parameters wins (Meta EU ad set: ct=meta_eu), so one ad set can get its own
+    // App Store Connect campaign; it only goes into the App Store link, never into the statistics below.
+    var ct = clean(params.get("ct")).slice(0, 40)
+           || (params.has("fbclid") || /^(facebook|instagram|meta|fb|ig)$/.test(src) ? "meta"
            : params.has("ttclid") || src === "tiktok" ? ("tiktok" + (ttCampaign ? "_" + ttCampaign : "")).slice(0, 40)
-           : clean(src).slice(0, 40) || "site";
+           : clean(src).slice(0, 40) || "site");
     Array.prototype.forEach.call(document.querySelectorAll('a[href*="apps.apple.com"]'), function (a) {
       try {
         var u = new URL(a.href);
